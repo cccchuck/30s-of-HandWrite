@@ -29,3 +29,25 @@ console.log(getMinutesDiffBetweenDates(new Date(2021, 01, 09), new Date(2022, 02
 console.log(getHoursDiffBetweenDates(new Date(2021, 01, 09), new Date(2022, 02, 08)));
 console.log(getDaysDiffBetweenDates(new Date(2021, 01, 09), new Date(2022, 02, 08)));
 console.log(getMonthsDiffBetweenDates(new Date(2021, 01, 09), new Date(2022, 02, 08)));
+
+/** Synchronous Sleep Function */
+const syncSleep = (ms) => {
+  const end = new Date().getTime() + ms;
+  while (new Date().getTime() < end) {};
+}
+(function () {
+  console.log(1, new Date().getTime());
+  syncSleep(500);
+  console.log(2, new Date().getTime());
+})()
+
+/** Asynchronous Sleep Function */
+const asyncSleep = (ms) => {
+  return new Promise((resolve) => { setTimeout(resolve, ms) });
+}
+
+(async function() {
+  console.log(1, new Date().getTime());
+  await asyncSleep(500);
+  console.log(2, new Date().getTime());
+})()
