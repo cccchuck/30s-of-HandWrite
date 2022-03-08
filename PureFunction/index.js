@@ -5,9 +5,9 @@
  */
 
 // Pure Function
-const add = (x, y) => x + y;
-const concat = (arr, value) => [...arr, value];
-const order = arr => [...arr].sort((a, b) => a - b);
+// const add = (x, y) => x + y;
+// const concat = (arr, value) => [...arr, value];
+// const order = arr => [...arr].sort((a, b) => a - b);
 
 // Impure Function
 const add = (x) => x + Math.random();
