@@ -9,6 +9,7 @@
 // const concat = (arr, value) => [...arr, value];
 // const order = arr => [...arr].sort((a, b) => a - b);
 
+
 // Impure Function
 const add = (x) => x + Math.random();
 const concat = (arr, value) => { arr.push(value); return arr }; // arr 被改变，即作用域外的变量被影响
